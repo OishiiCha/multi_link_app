@@ -15,12 +15,12 @@ bgc = "light steel blue"
 
 # Data
 filename = "data/data.csv"
-rows = []
+lines = []
 
 with open(filename, 'r') as csvfile:
     csvreader = csv.reader(csvfile)
-    for row in csvreader:
-        rows.append(row)
+    for line in csvreader:
+        line.append(line)
 
 
 # Rows
@@ -41,13 +41,13 @@ desc_font = ('calibri', 15, 'bold')
 # Root window
 root = Tk()
 root.geometry("300x500")
-root.title(str(rows[1]).replace("[","").replace("]","").replace("'",""))
+root.title(str(line[1]))
 root.resizable(width=False, height=False)
 root.configure(bg=bgc)
 root.geometry(str(width) + "x" + str(height))
 root.iconbitmap('data/links.ico')
 
-if int(str(rows[9]).replace("[","").replace("]","").replace("'","")):
+if int(str(line[9])):
     web_client = "https://pwa.zoom.us/wc/join/"
 else:
     web_client = "https://pwa.zoom.us/j/"
@@ -80,20 +80,20 @@ def jw_org():
 
 def wol():
     wol_link = "https://wol.jw.org"
-    webbrowser.open((wol_link))
+    webbrowser.open(wol_link, 1)
 
 def zoom_mw():
-    zoom_link = str(web_client+str(rows[3]).replace("[","").replace("]","").replace("'",""))
+    zoom_link = str(web_client+str(line[3]))
     # https://pwa.zoom.us/wc/join/ --Meeting ID
     webbrowser.open(zoom_link)
 
 def zoom_we():
-    zoom_link = str(web_client+str(rows[5]).replace("[","").replace("]","").replace("'",""))
+    zoom_link = str(web_client+str(line[5]))
     # https://pwa.zoom.us/wc/join/ --Meeting ID
     webbrowser.open(zoom_link)
 
 def notice():
-    notice_link = str(rows[7]).replace("[","").replace("]","").replace("'","")
+    notice_link = str(line[7])
     webbrowser.open(notice_link)
 
 def meeting_choice():
