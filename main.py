@@ -45,7 +45,7 @@ root.title(str(line[1]))
 root.resizable(width=False, height=False)
 root.configure(bg=bgc)
 root.geometry(str(width) + "x" + str(height))
-root.iconbitmap('data/links.ico')
+#root.iconbitmap('data/links.ico')
 
 if int(str(line[9])):
     web_client = "https://pwa.zoom.us/wc/join/"

@@ -1,6 +1,5 @@
 from tkinter import *
 import csv
-import time
 import os.path
 import os
 
@@ -11,7 +10,7 @@ setwindow.geometry("700x300")
 setwindow.title("Settings")
 setwindow.configure(background=bgc)
 setwindow.resizable(width=False, height=False)
-setwindow.iconbitmap('data/links.ico')
+#setwindow.iconbitmap('data/links.ico')
 
 # rows
 row1 = 25
