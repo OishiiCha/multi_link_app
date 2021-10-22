@@ -142,7 +142,7 @@ zoom.place(x=b_col, y=row3, anchor="center")
 noticeboard = Button(root, image=notice_image, bg=bgc, borderwidth=0, highlightthickness=0, activebackground=bgc, command=notice)
 noticeboard.place(x=b_col, y=row4, anchor="center")
 
-zoom_title = Label(root, text="Zoom Web", bg=bgc, fg="black", font=('calibri', 40, 'bold'))
+zoom_title = Label(root, text="Zoom", bg=bgc, fg="black", font=('calibri', 40, 'bold'))
 zoom_title.place(x=zoom_col, y=row1, anchor="center")
 zoom_info = Label(root, text="If you would like to join a meeting\nother than your congregation assigned ID\nplease enter it below", bg=bgc, fg="black", font=('calibri', 10, 'bold'))
 zoom_info.place(x=zoom_col, y=int((row2+row1)/2), anchor="center")
