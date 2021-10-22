@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['C:\\Users\\lucas\\Documents\\GitHub\\multil_ink_app'],
+             pathex=['C:\\Users\\JW\\Documents\\GitHub\\multil_ink_app'],
              binaries=[],
              datas=[],
              hiddenimports=[],
