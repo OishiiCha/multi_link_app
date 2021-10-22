@@ -27,6 +27,13 @@ column_l = 75
 column_s = 275
 column_c = 550
 
+frame1 = LabelFrame(setwindow, text="Set Configuration", font=('arial', 10, 'bold'), height=275, width=250, bg=bgc)
+frame1.place(x=column_s, y=150, anchor="center")
+
+frame2 = LabelFrame(setwindow, text="Current Configuration", font=('arial', 10, 'bold'), height=275, width=250, bg=bgc)
+frame2.place(x=column_c, y=150, anchor="center")
+
+
 # font
 l_font = ('arial', 10, 'bold')
 t_font = ('arial', 15, 'bold')
@@ -86,10 +93,11 @@ def setconfig():
     f.close()
     read()
 
-set_l = Label(setwindow, text="Set", bg=bgc, fg="black", font=t_font)
-set_l.place(x=column_s, y=row1, anchor="center")
-current_l = Label(setwindow, text="Current", bg="light grey", fg="black", font=t_font)
-current_l.place(x=column_c, y=row1, anchor="center")
+
+#set_l = Label(setwindow, text="Set", bg=bgc, fg="black", font=t_font)
+#set_l.place(x=column_s, y=row1, anchor="center")
+#current_l = Label(setwindow, text="Current", bg="light grey", fg="black", font=t_font)
+#current_l.place(x=column_c, y=row1, anchor="center")
 
 cong_l = Label(setwindow, text="Congregation Name", bg=bgc, fg="black", font=l_font)
 cong_l.place(x=column_l, y=row2, anchor="center")
