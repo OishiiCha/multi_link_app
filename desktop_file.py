@@ -24,8 +24,8 @@ tru1 = "gio set ~/Desktop/" + app1name2 + " metadata::trusted true"
 tru2 = "gio set ~/Desktop/" + app2name2 + " metadata::trusted true"
 
 if __name__ == '__main__':
-    f1.write("[Desktop Entry]\nVersion=1.0\nName=" + app1name + "\nComment=Opens application\nExec=python3 /home/" + usr + "/" + directory + "/" + app1 + "\nIcon=/home/" + usr + "/" + directory + "/" + icon + "\nTerminal=false\nType=Application\nCategories=Application;")
-    f2.write("[Desktop Entry]\nVersion=1.0\nName=" + app2name + "\nComment=Opens application\nExec=python3 /home/" + usr + "/" + directory + "/" + app2 + "\nIcon=/home/" + usr + "/" + directory + "/" + icon + "\nTerminal=false\nType=Application\nCategories=Application;")
+    f1.write("[Desktop Entry]\nVersion=1.0\nName=" + app1name + "\nComment=Opens application\nExec=python3 /home/" + usr + directory + "/" + app1 + "\nIcon=/home/" + usr + "/" + directory + "/" + icon + "\nTerminal=false\nType=Application\nCategories=Application;")
+    f2.write("[Desktop Entry]\nVersion=1.0\nName=" + app2name + "\nComment=Opens application\nExec=python3 /home/" + usr + directory + "/" + app2 + "\nIcon=/home/" + usr + "/" + directory + "/" + icon + "\nTerminal=false\nType=Application\nCategories=Application;")
     os.system(mv1)
     os.system(mv2)
     os.system("cd")
