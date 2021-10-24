@@ -5,6 +5,17 @@ from PIL import ImageTk, Image
 from datetime import date
 import calendar
 import csv
+import platform
+
+if platform.system() == "Windows":
+    cpc = 1
+elif platform.system() == "Linux":
+    cpc = 2
+elif platform.system() == "macOS":
+    cpc = 3
+else:
+    cpc = 4
+
 
 # Window options
 height = 500
@@ -45,7 +56,8 @@ root.title(str(line[1]))
 root.resizable(width=False, height=False)
 root.configure(bg=bgc)
 root.geometry(str(width) + "x" + str(height))
-#root.iconbitmap('data/links.ico')
+if cpc == 1:
+    root.iconbitmap('data/links.ico')
 
 if int(str(line[9])):
     web_client = "https://pwa.zoom.us/wc/join/"
@@ -55,7 +67,7 @@ else:
 
 # Clock
 def timed():
-    string = strftime('%I:%M %p').lstrip('0')
+    string = strftime('%A %d %B %Y   -   %I:%M:%S %p')
     clock_text.config(text=string)
     clock_text.after(1000, timed)
 
@@ -152,7 +164,7 @@ enter_button_button = Button(root, image=enter_button, bg=bgc, borderwidth=0, hi
 enter_button_button.place(x=zoom_col, y=row3-20, anchor="center")
 
 
-clock_text = Label(root, bg=bgc, fg="black", font=('calibri', 30, 'bold'))
+clock_text = Label(root, bg=bgc, fg="black", font=('calibri', 25, 'bold'))
 clock_text.place(x=str(width/2), y=row5, anchor="center")
 
 # Loop
